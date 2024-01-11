@@ -1,0 +1,7 @@
+{
+  "auth": {
+    "user_id": "468e663d-397d-413d-a631-98f268f248ba",
+    "username": "users",
+    "private_key": "<cryptography.hazmat.backends.openssl.ec._EllipticCurvePrivateKey object at 0x000001D1D8273310>"
+  }
+}
