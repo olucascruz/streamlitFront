@@ -19,7 +19,8 @@ def serialize_public_key(public_key):
 def serialize_private_key(public_key):
     return public_key.private_bytes(
         encoding=serialization.Encoding.PEM,
-        format=serialization.PublicFormat.SubjectPublicKeyInfo
+        format=serialization.PrivateFormat.TraditionalOpenSSL,
+        encryption_algorithm=serialization.NoEncryption()
     )
 
 def derive_shared_key(private_key, public_key):
@@ -78,7 +79,6 @@ def main():
     message = b"Hello, ECC!, MOTO"
     iv = os.urandom(16)
     ciphertext = encrypt_message(derived_key_sender, iv, message)
-
     #----------------------------------------------------------------------------------------
     # ENVIA PARA O SERVIDOR A MENSAGEM CRIPTOGRAFADA es os vetores de inicialização salt e iv
     #----------------------------------------------------------------------------------------
