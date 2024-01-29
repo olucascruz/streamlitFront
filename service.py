@@ -15,7 +15,7 @@ class API_CHAT:
         print(data)
         response = requests.post(url_register, json=data)
         print(response.text)
-        return (response.json(), response.status_code)
+        return (response, response.status_code)
         
 
     def login(self, data):

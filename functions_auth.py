@@ -47,7 +47,7 @@ def login_submitted(api:API_CHAT, username, password, sio):
 
 
 # Resgistrar Usuário.
-def register_submmited(api:API_CHAT,username, password):
+def register_submmited(api:API_CHAT, username, password):
     ### Função executada após clicar no botão de regitro ###
 
     private_key, public_key = generate_key_pair()

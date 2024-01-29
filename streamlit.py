@@ -42,7 +42,7 @@ def register_component(api:API_CHAT):
         # Every form must have a submit button.
         submitted = st.form_submit_button("Submit")
         if submitted:
-            register_submmited(api, username, password, sio)
+            register_submmited(api, username, password)
             
     if st.button("go to login"):
         st.session_state.state="login"
