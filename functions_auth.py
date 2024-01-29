@@ -16,6 +16,14 @@ def login_submitted(api:API_CHAT, username, password, sio):
     private_key, public_key = generate_key_pair()
     public_key_path = serialize_public_key(public_key) 
     private_key_path = serialize_private_key(private_key)
+
+    # Create new pair keys log
+    print("\n" + "---" * 15 + "LOG : Creating a new key pair when the user logs into their account" + "---" * 15)
+    print("\nUsername: ", username)
+    print("\nNew Private Key Serializaded:\n\n", private_key_path)
+    print("\nNew Public Key Serializaded:\n\n", public_key_path)
+    print("---" * 40 + "\n\n")
+
     with open(path_pem, "wb") as f:
         f.write(private_key_path)
     
@@ -55,6 +63,12 @@ def register_submmited(api:API_CHAT, username, password):
     public_key_path = serialize_public_key(public_key)
     
     private_key_path = serialize_private_key(private_key)
+
+    print("\n" + "---" * 15 + "LOG : Creating a new key pair when the user create a new account" + "---" * 15)
+    print("\nUsername: ", username)
+    print("\nNew Private Key Serializaded:\n\n", private_key_path)
+    print("\nNew Public Key Serializaded:\n\n", public_key_path)
+    print("---" * 40 + "\n\n")
     
     # Abre para leitura como bytes a privateKey
     with open(path_pem, "wb") as f:
