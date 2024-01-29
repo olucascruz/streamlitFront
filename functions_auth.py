@@ -45,22 +45,38 @@ def login_submitted(api:API_CHAT, username, password, sio):
         connect_socket(sio)
         st.session_state.state = "users"
 
+
+# Resgistrar Usuário.
 def register_submmited(api:API_CHAT,username, password):
+    ### Função executada após clicar no botão de regitro ###
+
     private_key, public_key = generate_key_pair()
+    
     public_key_path = serialize_public_key(public_key)
+    
     private_key_path = serialize_private_key(private_key)
+    
+    # Abre para leitura como bytes a privateKey
     with open(path_pem, "wb") as f:
         f.write(private_key_path)
+    
+    #Serializa a public key transformando em bytes
     public_key_path = serialize_public_key(public_key) 
+
+    # Cria o objeto enviado pela api
     data = {
         "username":username,
         "password": password,
         "public_key":public_key_path.decode()
         }
+    
+
     response, code_response = api.register(data)
     
+    # se o code response for 200 codigo de ok para chamada de api ele da um sinal de conta criada
     if code_response == 200:
         st.toast('Conta criada!')
+        #Variavel que define a tela que estamos.
         st.session_state.state = "login"
 
 def define_receiver(user, username, public_key):
