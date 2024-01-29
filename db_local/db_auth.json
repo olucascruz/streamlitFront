@@ -2,6 +2,6 @@
   "auth": {
     "user_id": "468e663d-397d-413d-a631-98f268f248ba",
     "username": "users",
-    "private_key": "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEICdofHDFr14yuvGcjzR6FwKWVG1anf/9+dPZDRpg/ZPjoAoGCCqGSM49\nAwEHoUQDQgAEvaVQ86MlG2EQROHzwsjWVzlJrD8tgiyqZbCYL9vTw06uWtk7Nh56\nU4S9DBZB6R6zocEBkbqPQgyK0ClLTdYrYA==\n-----END EC PRIVATE KEY-----\n"
+    "private_key": "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIEkHxg+baYJM3sKdhIGNE21E0cr7osxs509hpCQlBVuboAoGCCqGSM49\nAwEHoUQDQgAET7CJMY7DOAIKKnz55LD9+187l4vhuvIk5ecoPOqbadWLnU7FHASE\ngBEEFRyL7m8VCHQLfMpvh4CPfz7y5OHL6Q==\n-----END EC PRIVATE KEY-----\n"
   }
 }
